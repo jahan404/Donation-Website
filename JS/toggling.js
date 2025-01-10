@@ -27,6 +27,7 @@ document.getElementById('history-button').addEventListener('click',function(){
 
 
 /////////////////CLICKING DONATION BUTTON////////////////////////
+
 document.getElementById('donation-button').addEventListener('click',function(){
     //adding bg to donation button
     document.getElementById('donation-button').classList.add(

@@ -8,3 +8,13 @@ function hideElement(id){
 function unhideElement(id){
     document.getElementById(id).classList.remove('hidden');
 }
+
+//input field value
+function getInputFieldValueById(id){
+    return parseFloat(document.getElementById(id).value);
+}
+
+//text field value by id
+function getTextFieldValueById(id){
+    return parseFloat(document.getTextFieldValueById(id).value);
+}

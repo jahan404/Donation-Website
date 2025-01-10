@@ -26,9 +26,9 @@
 
 
 <body class="font">
-    <header class="sticky top-0 z-index-50">
+    <header id="header" class="sticky top-0 z-50 ">
         <!-- navbar -->
-        <nav class="bg-[#F9F7F3]">
+        <nav id="navbar" class="bg-[#F9F7F3]">
             <div class="w-11/12 mx-auto flex justify-between pt-6 pb-8">
 
             <div class="">
@@ -55,10 +55,10 @@
         </div>
         </nav>
        
-        
+         
 
         <!-- toggling -->
-        <section class="flex gap-5 justify-center pt-8 pb-8 bg-white">
+        <section id="toggle-button" class="flex gap-5 justify-center pt-8 pb-8 bg-white">
             <button id="donation-button" class="btn px-8 py-3 bg-[#B4F461] rounded-md font-bold">
                 Donation
             </button>
@@ -188,10 +188,34 @@
         
     </footer>
 
+    
+    
 
+    <script>
+        window.addEventListener("scroll", function() {
+        var header = document.getElementById("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    
+        if(window.scrollY>0){
+            document.getElementById('navbar').classList.remove('bg-[#F9F7F3]')
+            document.getElementById('toggle-button').classList.remove('bg-white','pt-8')
+
+            document.getElementById('header').classList.add('backdrop-blur-2xl','bg-white/80')
+            // document.getElementById('navbar').classList.add('backdrop-blur-2xl','bg-white/90')
+            // document.getElementById('toggle-button').classList.add('backdrop-blur-2xl','bg-white/90')
+        }
+        });
+    </script>
+    
+      
     <script src="./JS/donationCalcualtion.js"></script>
     <script src="./JS/utilities.js"></script>
     <script src="./JS/toggling.js"></script>
     <script src="./JS/history.js"></script>
+
+    
+
+        
+      
 </body>
 </html>
