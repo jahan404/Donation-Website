@@ -18,8 +18,11 @@ document.getElementById('history-button').addEventListener('click',function(){
         )
 
     hideElement('donation-cards-section');
+    hideElement('footer')
     unhideElement('history-section')
+
 })
+
 
 
 
@@ -46,5 +49,38 @@ document.getElementById('donation-button').addEventListener('click',function(){
         )
 
     unhideElement('donation-cards-section');
+    unhideElement('footer')
     hideElement('history-section')
 })
+
+
+
+
+
+
+////////////////////////adding footer to history page after clicking to donate now button/////////////////////////
+    document.getElementById('donate-now-button-noakhali').addEventListener('click',function(){
+        document.getElementById('history-button').addEventListener('click',function(){
+    
+          document.getElementById('footer').classList.remove('hidden')
+          console.log("hidden")
+        })
+    })
+
+
+    document.getElementById('donate-now-button-feni').addEventListener('click',function(){
+        document.getElementById('history-button').addEventListener('click',function(){
+    
+          document.getElementById('footer').classList.remove('hidden')
+          console.log("hidden")
+        })
+    })
+
+
+    document.getElementById('donate-now-button-quota-movement').addEventListener('click',function(){
+        document.getElementById('history-button').addEventListener('click',function(){
+    
+          document.getElementById('footer').classList.remove('hidden')
+          console.log("hidden")
+        })
+    })

@@ -1,22 +1,21 @@
-
 document.getElementById('donate-now-button-quota-movement').addEventListener('click',function(){
-    //adding donation to the remaining amount
-     const donationAmount = getInputFieldValueById('input-field-value-quota-movement')
-     const remainingDonation = getTextFieldValueById('remaining-donation-quota-movement')
-     console.log(donationAmount,remainingDonation)
-     if(isNaN(donationAmount) || donationAmount<=0){
-          return;
-     }
-
-     document.getElementById('remaining-donation-quota-movement').innerText = donationAmount+remainingDonation;
-     
-    //reducing donation amount from my account
-    const myBalance = getTextFieldValueById('my-balance');
-
-    if( myBalance < donationAmount){
-
+    const v = calculateDonation('input-field-value-quota-movement','remaining-donation-quota-movement','my-balance')
+    if(!v)
         return;
-    }
 
-    document.getElementById('my-balance').innerText = myBalance - donationAmount;
+
+
+    const donationAmount = getInputFieldValueById('input-field-value-quota-movement')
+    /////////////////////////History Section//////////////////////////
+    const log = document.createElement('div')
+    log.className = 'bg-white rounded-md p-8 border'
+
+    log.innerHTML =`
+        <h1 class="font-bold text-black mb-2">${donationAmount} Taka is Donated for the injured people of Quota Movement, Bangladesh</h1>
+       <p class="text-gray-600 font-light text-sm bg-slate-100 rounded-md py-4">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p> 
+        `
+       document.getElementById('history-section').prepend(log)
+
+
+       
 })
