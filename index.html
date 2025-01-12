@@ -29,11 +29,12 @@
     <header id="header" class="sticky top-0 z-50 ">
         <!-- navbar -->
         <nav id="navbar" class="bg-[#F9F7F3]">
-            <div class="w-11/12 mx-auto flex justify-between pt-6 pb-8">
+            <div id="nav-div" class="w-11/12 mx-auto flex justify-between pt-6 pb-8">
 
-            <div class="">
+            <a href="./blog.html">
                   <button class="btn px-8 py-3 bg-[#B4F461] rounded-md font-bold">Blog</button>
-            </div>
+            </a>
+            
 
             <div class="flex items-center gap-3">
                    <div>
@@ -96,11 +97,13 @@
                         <p class="py-6 font-light">
                             The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-
+                        
                         <input id="input-field-value-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full font-light" />
-
-                        <div id="donate-now-button-noakhali" class="bg-[#B4F461] text-center font-bold p-3 rounded-lg hover:bg-gray-300 my-6">
-                            Donate Now
+                        <!-- hover:bg-gray-300 -->
+                        <div class="text-center">
+                            <button id="donate-now-button-noakhali" class="btn bg-[#B4F461] text-center font-bold px-7 py-4 rounded-lg  my-6">
+                                Donate Now
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -130,8 +133,12 @@
 
                         <input id="input-field-value-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full font-light" />
 
-                        <div id="donate-now-button-feni" class="bg-[#B4F461] text-center font-bold p-3 rounded-lg hover:bg-gray-300 my-6">
-                            Donate Now
+                        
+                        <!-- hover:bg-gray-300 -->
+                        <div class="text-center">
+                            <button id="donate-now-button-feni" class="btn bg-[#B4F461] text-center font-bold px-7 py-4 rounded-lg  my-6">
+                                Donate Now
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -162,8 +169,12 @@
 
                         <input id="input-field-value-quota-movement" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full font-light" />
 
-                        <div id="donate-now-button-quota-movement" class="bg-[#B4F461] text-center font-bold p-3 rounded-lg hover:bg-gray-300 my-6">
-                            Donate Now
+                        
+                        <!-- hover:bg-gray-300 -->
+                        <div class="text-center">
+                            <button id="donate-now-button-quota-movement" class="btn bg-[#B4F461] text-center font-bold px-7 py-4 rounded-lg  my-6">
+                                Donate Now
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -178,6 +189,31 @@
          <section id="history-section" class="hidden w-11/12 mx-auto space-y-10 mb-10">
             
          </section>
+
+
+        <!-- section3 : Modal UI-->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+        <h3 class="text-center text-4xl font-bold mb-5">Congrats!</h3>
+        <div>
+            <img src="./assets/coin.png" alt="" class="mx-auto w-[40px]">
+        </div>
+        <p class="text-center py-4 font-light text-base text-gray-600">You Have Donated for Humankind</p>
+        <p class="text-center font-bold text-2xl">Successfully</p>
+
+
+        <!-- button -->
+        <div class="modal-action justify-center">
+        <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->  
+            <button id="close" class="btn">Close Confirmation</button>
+        </form>
+        </div>
+
+        </div>
+        </dialog>
+
+
     </main>
 
 
@@ -185,6 +221,7 @@
     <footer id="footer" class="h-28 bg-[#F9F7F3]">
         
     </footer>
+    
 
     
     
@@ -193,12 +230,21 @@
         window.addEventListener("scroll", function() {
         var header = document.getElementById("header");
         header.classList.toggle("sticky", window.scrollY > 0);
+
+        // var toggle = document.getElementById("toggle-button");
+        // toggle.classList.toggle("sticky", window.scrollY > 0);
     
         if(window.scrollY>0){
-            document.getElementById('navbar').classList.remove('bg-[#F9F7F3]')
+            // document.getElementById('navbar').classList.remove('bg-[#F9F7F3]')
             document.getElementById('toggle-button').classList.remove('bg-white','pt-8')
+            document.getElementById('nav-div').classList.remove('pt-6' ,'pb-8')
+            
 
-            document.getElementById('header').classList.add('backdrop-blur-2xl','bg-white/60')
+            document.getElementById('nav-div').classList.add('pt-4' ,'pb-5')
+            document.getElementById('navbar').classList.add('backdrop-blur-2xl','bg-[#F9F7F3]/98')
+            document.getElementById('toggle-button').classList.add('backdrop-blur-2xl','bg-white/60','pt-3')
+
+            // document.getElementById('header').classList.add('backdrop-blur-2xl','bg-white/60')
         }
         });
     </script>
@@ -207,7 +253,6 @@
     <script src="./JS/toggling.js"></script>
 
     <script src="./JS/utilities.js"></script>
-    
     <script src="./JS/noakhali.js"></script>
     <script src="./JS/feni.js"></script>
     <script src="./JS/quota_movement.js"></script>

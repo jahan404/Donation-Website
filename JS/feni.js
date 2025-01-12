@@ -20,5 +20,7 @@ document.getElementById('donate-now-button-feni').addEventListener('click',funct
     
 
     
-
+    //MODAL
+    const modal = document.getElementById('my_modal_5')
+    modal.showModal();
 })

@@ -29,6 +29,7 @@ function calculateDonation (inputValue,availableDonation,myAccountBalance){
      
      console.log(donationAmount,remainingDonation)
      if(isNaN(donationAmount) || donationAmount<=0){
+          alert("Invalid Donation Amount!");
           return false;
      }
 
@@ -38,7 +39,7 @@ function calculateDonation (inputValue,availableDonation,myAccountBalance){
     const myBalance = getTextFieldValueById(myAccountBalance);
 
     if( myBalance < donationAmount){
-
+        alert("Insufficient Balance!");
         return false;
     }
 
@@ -46,18 +47,3 @@ function calculateDonation (inputValue,availableDonation,myAccountBalance){
     return true;
 }
 
-
-
-
-
-
-////////////////////////adding footer to history page after clicking to donate now button/////////////////////////
-function unhideFooter(id){
-    document.getElementById(id).addEventListener('click',function(){
-        document.getElementById('history-button').addEventListener('click',function(){
-    
-          document.getElementById(id).classList.remove('hidden')
-          console.log("hidden")
-        })
-    })
-}

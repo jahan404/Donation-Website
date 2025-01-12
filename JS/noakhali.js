@@ -19,6 +19,7 @@ document.getElementById('donate-now-button-noakhali').addEventListener('click',f
     document.getElementById('history-section').prepend(log)
 
 
-    
-
+    //MODAL
+    const modal = document.getElementById('my_modal_5')
+    modal.showModal();
 })
