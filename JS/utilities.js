@@ -14,7 +14,7 @@ function getInputFieldValueById(id){
     return parseFloat(document.getElementById(id).value);
 }
 
-//text field value by id
+//text field inner text by id
 function getTextFieldValueById(id){
-    return parseFloat(document.getTextFieldValueById(id).value);
+    return parseFloat(document.getElementById(id).innerText);
 }

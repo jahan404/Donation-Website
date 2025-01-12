@@ -11,10 +11,10 @@ document.getElementById('history-button').addEventListener('click',function(){
 
     //removing bg from donation button
     document.getElementById('donation-button').classList.add(
-        'bg-transparent' 
+        'bg-transparent','border','text-[#111111B3]' 
         )
     document.getElementById('donation-button').classList.remove(
-        'bg-[#B4F461]' 
+        'bg-[#B4F461]' ,'font-bold'
         )
 
     hideElement('donation-cards-section');
