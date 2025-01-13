@@ -29,28 +29,30 @@
     <header id="header" class="sticky top-0 z-50 ">
         <!-- navbar -->
         <nav id="navbar" class="bg-[#F9F7F3]">
-            <div id="nav-div" class="w-11/12 mx-auto flex justify-between pt-6 pb-8">
-
+            <div id="nav-div" class="w-11/12 mx-auto flex justify-between gap-2 pt-6 pb-8">
+             <!-- blog button -->
             <a href="./blog.html">
-                  <button class="btn px-8 py-3 bg-[#B4F461] rounded-md font-bold">Blog</button>
+                  <button class="btn px-5 h-10 min-h-0 sm:px-8 sm:py-3 bg-[#B4F461] rounded-md font-bold 
+                  text-xs sm:text-base">Blog</button>
             </a>
             
-
-            <div class="flex items-center gap-3">
+            <!-- heading -->
+            <div class="flex flex-col lg:flex-row items-center gap-3">
                    <div>
-                    <img src="assets/logo.png" alt="">
+                    <img src="assets/logo.png" alt="" class="w-10 lg:w-16">
                    </div>
                    <div>
-                    <p class="font-bold text-xl">Donate Bangladesh</p>
+                    <p class="font-bold text-base sm:text-xl">Donate Bangladesh</p>
                    </div>
             </div>
-
-            <div class="flex items-center gap-3">
+            
+            <!-- myBalance -->
+            <div class="flex pt-2 sm:pt-0 items-start sm:items-center gap-1 md:gap-3">
                 <div>
-                    <img src="assets/coin.png" alt="">
+                    <img src="assets/coin.png" alt="" class="w-4 md:w-7">
                    </div>
                    <div>
-                    <p class="text-[#111111B3] text-lg"><span id="my-balance">5500</span> BDT</p>
+                    <p class="text-[#111111B3] font-bold text-xs sm:text-lg"><span id="my-balance">5500</span> BDT</p>
                    </div>
             </div>
         </div>
@@ -78,15 +80,16 @@
         <!--section1 : card section -->
         <section id="donation-cards-section" class="w-11/12 mx-auto space-y-10 mb-10">
             <!-- card 1    N O A K H A L I-->
-            <div class="border rounded-lg">
-                <div class="p-10">
+            <div class="border rounded-lg shadow-xl">
+                <div class="p-4 lg:p-10">
                     <div class="hero-content flex-col lg:flex-row gap-8 p-0 max-w-full">
-                      <div class="w-1/2">
+                      <div class="lg:w-1/2">
                         <img
                         src="assets/noakhali.png"
                         class=" rounded-lg w-full" />
                       </div>
-                      <div class="w-1/2">
+
+                      <div class="lg:w-1/2">
                         <div class="mb-6">
                             <button class="btn flex items-center text-gray-500">
                                 <img src="assets/coin.png" alt="">
@@ -111,15 +114,15 @@
             </div>
 
             <!-- card 2    F E N I-->
-            <div class="border rounded-lg">
-                <div class="p-10">
+            <div class="border rounded-lg shadow-xl">
+                <div class="p-4 lg:p-10">
                     <div class="hero-content flex-col lg:flex-row gap-8 p-0 max-w-full">
-                      <div class="w-1/2">
+                      <div class="lg:w-1/2">
                         <img
                         src="assets/feni.png"
                         class=" rounded-lg w-full" />
                       </div>
-                      <div class="w-1/2">
+                      <div class="lg:w-1/2">
                         <div class="mb-6">
                             <button class="btn flex items-center text-gray-500">
                                 <img src="assets/coin.png" alt="">
@@ -147,15 +150,15 @@
 
 
             <!-- card 3 QUOTA-->
-            <div class="border rounded-lg">
-                <div class="p-10">
+            <div class="border rounded-lg shadow-xl">
+                <div class="p-4 lg:p-10">
                     <div class="hero-content flex-col lg:flex-row gap-8 p-0 max-w-full">
-                      <div class="w-1/2">
+                      <div class="lg:w-1/2">
                         <img
                         src="assets/quota-protest.png"
                         class=" rounded-lg w-full" />
                       </div>
-                      <div class="w-1/2">
+                      <div class="lg:w-1/2">
                         <div class="mb-6">
                             <button class="btn flex items-center text-gray-500">
                                 <img src="assets/coin.png" alt="">
@@ -186,13 +189,13 @@
 
 
         <!-- section2 : history section -->
-         <section id="history-section" class="hidden w-11/12 mx-auto space-y-10 mb-10">
+         <section id="history-section" class="hidden w-11/12 mx-auto space-y-5 sm:space-y-10 mb-5 sm:mb-10">
             
          </section>
 
 
         <!-- section3 : Modal UI-->
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <dialog id="my_modal_5" class="modal modal-middle">
         <div class="modal-box">
         <h3 class="text-center text-4xl font-bold mb-5">Congrats!</h3>
         <div>

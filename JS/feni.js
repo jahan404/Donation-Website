@@ -10,7 +10,7 @@ document.getElementById('donate-now-button-feni').addEventListener('click',funct
     const donationAmount = getInputFieldValueById('input-field-value-feni')
     /////////////////////////History Section//////////////////////////
     const log = document.createElement('div')
-    log.className = 'bg-white rounded-md p-8 border'
+    log.className = 'bg-white rounded-md p-4 sm:p-8 border'
 
     log.innerHTML =`
         <h1 class="font-bold text-black mb-2">${donationAmount} Taka is Donated for flood-2024 at Feni, Bangladesh</h1>

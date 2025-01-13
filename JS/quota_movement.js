@@ -8,7 +8,7 @@ document.getElementById('donate-now-button-quota-movement').addEventListener('cl
     const donationAmount = getInputFieldValueById('input-field-value-quota-movement')
     /////////////////////////History Section//////////////////////////
     const log = document.createElement('div')
-    log.className = 'bg-white rounded-md p-8 border'
+    log.className = 'bg-white rounded-md p-4 sm:p-8 border'
 
     log.innerHTML =`
         <h1 class="font-bold text-black mb-2">${donationAmount} Taka is Donated for the injured people of Quota Movement, Bangladesh</h1>

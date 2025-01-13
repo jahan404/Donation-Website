@@ -28,45 +28,48 @@
 <body class="font">
 
     <header>
-        <nav id="navbar" class="bg-[#F9F7F3] mb-16">
-            <div class="w-11/12 mx-auto flex justify-between pt-6 pb-8">
-
-            <a href="./index.html">
-                  <button class="btn px-8 py-3 bg-[#B4F461] rounded-md font-bold">Home</button>
-            </a>
-
-            <div class="flex items-center gap-3">
-                   <div>
-                    <img src="assets/logo.png" alt="">
-                   </div>
-                   <div>
-                    <p class="font-bold text-xl">Donate Bangladesh</p>
-                   </div>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <div>
-                    <img src="assets/coin.png" alt="">
-                   </div>
-                   <div>
-                    <p class="text-[#111111B3] text-lg"><span id="my-balance">5500</span> BDT</p>
-                   </div>
-            </div>
+      <nav id="navbar" class="bg-[#F9F7F3]">
+        <div id="nav-div" class="w-11/12 mx-auto flex justify-between gap-2 pt-6 pb-8">
+         <!-- blog button -->
+        <a href="./index.html">
+              <button class="btn px-3 sm:px-8 h-10 min-h-0 sm:py-3 bg-[#B4F461] rounded-md font-bold 
+              text-xs sm:text-base">Home</button>
+        </a>
+        
+        <!-- heading -->
+        <div class="flex flex-col lg:flex-row items-center gap-3">
+               <div>
+                <img src="assets/logo.png" alt="" class="w-10 lg:w-16">
+               </div>
+               <div>
+                <p class="font-bold text-base sm:text-xl">Donate Bangladesh</p>
+               </div>
         </div>
-        </nav>
+        
+        <!-- myBalance -->
+        <div class="flex pt-2 sm:pt-0 items-start sm:items-center gap-1 md:gap-3">
+            <div>
+                <img src="assets/coin.png" alt="" class="w-4 md:w-7">
+               </div>
+               <div>
+                <p class="text-[#111111B3] font-bold text-xs sm:text-lg"><span id="my-balance">5500</span> BDT</p>
+               </div>
+        </div>
+    </div>
+    </nav>
     </header>
 
     <main>
         <section class="w-11/12 mx-auto">
-            <h1 class="font-bold text-4xl mb-14">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+            <h1 class="font-bold text-2xl lg:text-4xl mt-4 sm:mt-8 mb-8 sm:mb-14">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
             
 
 
             <div class="join join-vertical w-full mb-14">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" checked="checked" />
-                  <div class="collapse-title text-xl font-medium">What is Document Object Model(DOM)?</div>
-                  <div class="collapse-content font-light text-base">
+                  <div class="collapse-title text-base sm:text-xl font-medium">What is Document Object Model(DOM)?</div>
+                  <div class="collapse-content font-light text-sm sm:text-base">
                     <p>
                         The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where: <br>
 
@@ -77,8 +80,8 @@
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you select an element from DOM?</div>
-                  <div class="collapse-content font-light">
+                  <div class="collapse-title text-base sm:text-xl font-medium">How do you select an element from DOM?</div>
+                  <div class="collapse-content font-light text-sm sm:text-base">
                     <p>
                         You can select an element from the DOM using JavaScript methods like: <br><br>
 
@@ -92,8 +95,8 @@
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">What is event delegation in the concept of DOM, and why is it useful?</div>
-                  <div class="collapse-content font-light">
+                  <div class="collapse-title text-base sm:text-xl font-medium">What is event delegation in the concept of DOM, and why is it useful?</div>
+                  <div class="collapse-content font-light text-sm sm:text-base">
                     <p>
                         Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements, even if they are dynamically added later. <br><br>
 
@@ -107,8 +110,8 @@
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-                  <div class="collapse-content font-light">
+                  <div class="collapse-title text-base sm:text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content font-light text-sm sm:text-base">
                     <p>
                         You can manipulate an element's attributes and styles using the DOM as follows:<br><br>
 
